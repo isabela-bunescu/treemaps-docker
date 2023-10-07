@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "64c196bc17b3a81568c77acd"
+  },
+  "key": "root_key",
+  "name": "Default root user",
+  "root": true,
+  "edit": true,
+  "creation_date": "2023-07-26 23:57:16.644371",
+  "last_access": "2023-07-26 23:57:16.644371"
+},
+{
+  "_id": {
+    "$oid": "64c97148ebd1fa47d6cb28e3"
+  },
+  "key": "keyuser1",
+  "name": "User 1",
+  "root": true,
+  "edit": true,
+  "creation_date": "2023-08-01 22:55:36.923492",
+  "last_access": "never",
+  "date_created": "<built-in method now of type object at 0x00007FF99B031CD0>",
+  "last_accessed": "never"
+}]

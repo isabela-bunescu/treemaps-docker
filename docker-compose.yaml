@@ -1,0 +1,44 @@
+version: '3'
+
+services: 
+  mongo:
+    build:
+      context: .
+      dockerfile: 
+        ./DB/Dockerfile
+    ports:
+      - 27017:27017 
+    networks:
+      - backend-net
+  backend:
+    build:
+      context: ./master-thesis-backend
+      dockerfile: 
+        ./master-thesis-backend/Dockerfile
+    environment:
+      DB_HOST: mongo
+      DB_USER:
+      DB_PASS:
+      DB_PORT: 27017
+    networks:
+      - backend-net
+    depends_on:
+      - mongo
+  frontend:
+    build:
+      context: ./tree-maps-ng
+      dockerfile: 
+        ./tree-maps-ng/Dockerfile
+    ports:
+      - 80:80
+    environment:
+      BEHOST: backend
+    networks:
+      - backend-net
+    depends_on:
+      - backend
+  
+
+networks:
+  backend-net:
+    driver: bridge

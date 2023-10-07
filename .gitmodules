@@ -1,0 +1,6 @@
+[submodule "tree-maps-ng"]
+	path = tree-maps-ng
+	url = https://github.com/isabela-bunescu/tree-maps-ng.git
+[submodule "master-thesis-backend"]
+	path = master-thesis-backend
+	url = https://github.com/isabela-bunescu/master-thesis-backend.git
