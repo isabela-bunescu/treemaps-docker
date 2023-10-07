@@ -12,9 +12,9 @@ services:
       - backend-net
   backend:
     build:
-      context: ./master-thesis-backend
+      context: master-thesis-backend
       dockerfile: 
-        ./master-thesis-backend/Dockerfile
+        ./Dockerfile
     environment:
       DB_HOST: mongo
       DB_USER:
@@ -26,9 +26,9 @@ services:
       - mongo
   frontend:
     build:
-      context: ./tree-maps-ng
+      context: tree-maps-ng
       dockerfile: 
-        ./tree-maps-ng/Dockerfile
+        ./Dockerfile
     ports:
       - 80:80
     environment:
